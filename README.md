@@ -30,20 +30,19 @@
 
 ### 🧾 Natural Language Query & Filters
 Filter your search by Device ID, Plant Location, and Month-Year:
-![Filter and Query Input](./8553fa60-e594-4f34-a0c3-0fe856c8a502.png)
-
+!![Filter and Query Input](https://github.com/user-attachments/assets/e9a4f95d-f9f8-4e97-94e9-a0511619edc3)
 ---
 
 ### 📈 OEE Summary Generation
 Displays metrics like OEE %, Availability, Performance, and Quality:
-!![image](https://github.com/user-attachments/assets/e9a4f95d-f9f8-4e97-94e9-a0511619edc3)
-
+!![image](https://github.com/user-attachments/assets/0aa49e04-4f55-4adc-a3f4-61464a766e44)
 
 ---
 
 ### 🔎 Insights, Recommendations & Reasoning
 Provides root-cause insights and suggestions to improve efficiency:
-!![image](https://github.com/user-attachments/assets/0aa49e04-4f55-4adc-a3f4-61464a766e44)
+!![image]![image](https://github.com/user-attachments/assets/7c012262-7974-4cdb-9127-05e5cacf6076)
+
 
 
 ---
