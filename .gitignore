@@ -1,0 +1,6 @@
+.env
+.vscode/
+chroma_db/
+venv/
+~$synthetic_oee_data_complete.xlsx
+dataset.py
