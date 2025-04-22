@@ -36,29 +36,41 @@ Filter your search by Device ID, Plant Location, and Month-Year:
 
 ### 📈 OEE Summary Generation
 Displays metrics like OEE %, Availability, Performance, and Quality:
-![OEE Metrics Display](./cab03e96-edc0-40d4-b711-29a97117fc56.png)
+!![image](https://github.com/user-attachments/assets/e9a4f95d-f9f8-4e97-94e9-a0511619edc3)
+
 
 ---
 
 ### 🔎 Insights, Recommendations & Reasoning
 Provides root-cause insights and suggestions to improve efficiency:
-![Insights & Recommendations](./a05707c5-7e7a-491f-bc34-0893fe8f10b6.png)
+!![image](https://github.com/user-attachments/assets/0aa49e04-4f55-4adc-a3f4-61464a766e44)
+
 
 ---
 
-## ⚙️ How It Works
+### 📊 Phase 1: Data Preparation
+- **Upload Excel File**: Load machine performance metrics from a `.xlsx` file.
+- **OEE Calculation**: Automatically compute Overall Equipment Effectiveness (OEE) for each row.
+- **Text Chunking**: Convert each row into a descriptive natural language text chunk.
+- **Embedding Generation**: Use `SentenceTransformer` to convert each chunk into a vector representation.
+- **Vector Storage**: Store embeddings in **ChromaDB** along with metadata (DeviceID, Location, Month-Year).
 
-1. **Upload sensor data** in `.xlsx` format.
-2. Select your desired filters from the sidebar.
-3. Ask a natural language question (e.g., _"Show OEE for Device2 at Plant2 in Apr-2025"_).
-4. The assistant processes the query and shows metrics, insights, and improvement suggestions.
+### 💬 Phase 2: User Interaction
+- **Streamlit UI**: Users interact via a user-friendly Streamlit app.
+- **Filter Selection**: Choose filters like DeviceID, Location, and Month.
+- **Ask a Question**: Type a natural language query (e.g., *“Show OEE for Device2 at Plant2 in Apr-2025”*).
+- **Query Embedding**: Convert the query into a vector.
+- **RAG Process**:
+  - Retrieve relevant chunks from **ChromaDB** using **vector similarity** + **metadata filtering**.
+  - Send the retrieved context + user query to **Groq LLaMA 3 70B** via **LangChain**.
+- **Answer Generation**: Display the final answer in the Streamlit interface with insights and suggestions.
+
 
 ---
 
 ## 🚀 Future Enhancements
 
-- Support for real-time sensor integration via APIs.
-- Alerts on underperforming equipment.
+- Support for real-time sensor integration via APIs..
 - Comparative analysis between devices and months.
 - Export insights to PDF/CSV.
 
